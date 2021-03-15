@@ -1,9 +1,40 @@
 * {
     margin: 0px;
+    padding: 0px;
 }
+
+.main {
+    font-size: 100%;
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .nav-bar {
-  
+    text-align: center;
+    letter-spacing: 20px;
+    padding: 20px;
+    color: #FFF;
+    background-color: aquamarine;
 }
+
+.content-area {
+    padding: 20px;
+    background-color: rgb(194, 194, 194);
+}
+
+.button, .inputs, .area-text, .selection-menu, .typo {
+    font-size: x-large;
+    margin-top: 20px;
+}
+
+.footer-bar {
+    text-align: center;
+    padding: 10px;
+    color: #FFF;
+    background-color: aquamarine;
+}
+
 
 button {
   padding: 10px 20px;

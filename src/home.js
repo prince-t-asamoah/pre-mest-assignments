@@ -15,16 +15,14 @@ function Home() {
         // Main starts here
             <div class='main'>
 
+            {/* Navigation bar starts here */}
+                <div class='nav-bar'>
+                    <Navbar/>
+                </div>
+            {/* Navigation bar ends here */}
+                
             {/* Contents starts here */}
                 <div class='content-area'>
-
-                {/* Navigation bar starts here */}
-                    <div class='nav-bar'>
-                        <Navbar/>
-                    </div>
-                {/* Navigation bar ends here */}
-
-                    <h2>This is my homepage</h2>
 
                     {/* Buttons start here */}
                     <div class='button'>
@@ -94,7 +92,7 @@ function Home() {
 
             {/* Footer bar starts here */}
                 <div class='footer-bar'>
-                    <Footer text='All rights reserved 2021'/>
+                    <Footer text='All rights reserved., Copyright 2021'/>
                 </div>
             {/* Footer bar ends here */}
 
