@@ -4,6 +4,7 @@ import Input from './formComponents/input';
 import TextArea from './formComponents/textArea';
 import SelectOption from './formComponents/selectOption';
 import Typography from './formComponents/typography';
+import './home.css';
 
 function Home() {
     return(

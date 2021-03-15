@@ -1,0 +1,16 @@
+* {
+    margin: 0px;
+}
+.nav-bar {
+  
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  color:#FFF;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 5px;
+}
