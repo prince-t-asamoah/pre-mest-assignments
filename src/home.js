@@ -1,10 +1,14 @@
+import './home.css';
+
+// Components
 import Navbar from './formComponents/navbar';
 import Button from './formComponents/button';
 import Input from './formComponents/input';
 import TextArea from './formComponents/textArea';
 import SelectOption from './formComponents/selectOption';
 import Typography from './formComponents/typography';
-import './home.css';
+import Footer from './formComponents/footer';
+
 
 function Home() {
     return(
@@ -12,7 +16,7 @@ function Home() {
             <div class='main'>
 
             {/* Contents starts here */}
-                <div class='content'>
+                <div class='content-area'>
 
                 {/* Navigation bar starts here */}
                     <div class='nav-bar'>
@@ -87,7 +91,12 @@ function Home() {
 
                 </div>
             {/* Contents end here */}
-            
+
+            {/* Footer bar starts here */}
+                <div class='footer-bar'>
+                    <Footer text='All rights reserved 2021'/>
+                </div>
+            {/* Footer bar ends here */}
 
             </div>
         // Main ends here
