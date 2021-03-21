@@ -1,8 +1,8 @@
 function Inputs(props) {
     return (
-        <div className="field">
-            <input type={props.type} placeholder={props.name} required/>
-        </div>
+        <>
+            <input type={props.type} placeholder={props.text} name={props.name} required/>
+        </>
     )
 }
 
