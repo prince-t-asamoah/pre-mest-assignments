@@ -1,70 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
-.wrapper {
+body {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans" ,"Garuda" ,"Verdana" ,"Tahoma", sans-serif;
+    /* background-image: url(/img/signup_bg.jpg); */
+}
+
+.main {
     display: flex;
-    flex-direction: column;
-    /* height: 100vh; */
-    align-content: center;
-    justify-items: center;
-    max-width: 660px;
-    border-radius: 10px;
-    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
-    
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ff5500;
 }
 
-.title {
-    padding: 10px;
+.sign-up-container {
+    /* max-height: 100vh; */
+    /* margin: auto; */
+    background-color: #f2f2f2;
 }
 
-.title h1 {
-    font-size: 35px;
-    font-weight: 600;
+.sign-up-content {
+    padding: 50px;
+}
+
+.sign-up-form h2 {
+    /* border: 1px solid #111; */
     text-align: center;
+    padding: 20px 0px 10px;
 }
 
-.form-container {
-    padding: 10px 50px 50px;
-}
-
-.form-inner form .field {
-    height: 50px;
-    /* width: 100%; */
-    margin-top: 20px;
-}
-
-.form-inner form .field input {
-    height: 100%;
+.form-input {
     width: 100%;
+    padding: 15px 20px 15px;
+    margin-top: 15px;
+    font-size: 16px;
     outline: none;
-    padding-left: 15px;
-    font-size: 17px;
-    border-radius: 5px;
-    border: 1px solid lightgrey;
-    border-bottom-width: 2px;
+    border: none;
 }
 
-.form-inner form .terms-text,
-.form-inner form .login-text {
-    margin-top: 15px;
-} 
+.form-input:focus,
+.form-input:hover {
+    outline: 1px solid #ff5500;
+}
 
-.form-inner form .terms-text a,
-.form-inner form .login-text a {
-    color: #9face6;
+.agree-term-link a, .log-in-here-link a, 
+.agree-term-link a:hover, .login-here-link a:hover {
+    color: #ff5500;
     text-decoration: none;
 }
 
-.form-inner form .terms-text a:hover,
-.form-inner form .login-text a:hover {
-    text-decoration: underline;
+.agree-term-text, .agree-term-link {
+    display: inline;
 }
 
-form .field input[type="submit"] {
-    /* color: #fff; */
-    /* font-size: 20px; */
-    /* font-weight: 500; */
-    /* padding-left: 0px; */
-    /* border: none; */
-    /* cursor: pointer; */
-    /* background: linear-gradient(to left, #74ebd5, #9face6); */
+.sign-up-form .form-group input[type="submit"] {
+    color: #fff;
+    background-color: #ff5500;
 }
- 
+
+.sign-up-form .form-group input[type="submit"]:hover {
+    color: #111;
+    background-color: #fff;
+    outline: 1px solid #ff5500;
+} 
+
+.sign-up-form .form-group input[type="submit"] {
+    color: #fff;
+    background-color: #ff5500;
+}
+
+.agree-term-text, .agree-term-link,
+.login-here-text, .login-here-link {
+    margin-top: 20px;
+}
+
+/* For mobile */
+
+@media sreen and (max-width:500px) {
+
+}

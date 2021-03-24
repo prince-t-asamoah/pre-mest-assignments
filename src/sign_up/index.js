@@ -23,52 +23,60 @@ function Index() {
     }
 
     return (
-        <div className="wrapper">
+        <div className="main">
 
-            <div className="title">
-                <h1>Create Account</h1>
-            </div>
+            <div className="sign-up">
 
-            <div className="form-container">
+                <div className="sign-up-container">
 
-                <div className="form-inner">
+                    <div className="sign-up-content">
 
-                    <form action="#" className="login">
+                        <form action="#" className="sign-up-form">
+                            <h2 className="form-title">Create account</h2>
 
-                        <div className="field">
-                            <Inputs type="text" text="Your Username" event={updateUsername}/>
-                        </div>
+                            <div className="form-group">
+                                <Inputs type="text" className="form-input" name="firstname" text="Your First Name"/>
+                            </div>
 
-                        <div className="field">
-                            <Inputs type="email" text="Your Email" event={updateUserEmail}/>
-                        </div>
+                            <div className="form-group">
+                                <Inputs type="text" className="form-input" name="lastname" text="Your Last Name"/>
+                            </div>
 
-                        <div className="field">
-                            <Inputs type="password" text="Your Password" event={updateUserPassword}/>
-                        </div>
+                            <div className="form-group">
+                                <Inputs type="email" className="form-input" name="email" text="Your Email"/>
+                            </div>
 
-                        <div className="field">
-                            <Inputs type="password" text="Confirm Password" event={updateUserPassword}/>
-                        </div>
+                            <div className="form-group">
+                                <Inputs type="password" className="form-input" name="password" text="Your Password"/>
+                            </div>
 
-                        <div className="terms-text">
-                            <Inputs type="radio"/>I agree to all statements in <a href="#">Terms of service</a>
-                        </div>
+                            <div className="form-group">
+                                <Inputs type="email" className="form-input" name="email" text="Confirm Your Password"/>
+                            </div>
 
-                        <div className="field">
-                            <Inputs type="submit" name="Sign UP"/>
-                        </div>
+                            <div className="form-group">
+                                <Inputs type="checkbox" name="agree-term" id="agree-term"/>
+                                <p className="agree-term-text">I agree to all statements in <span className="agree-term-link"> <a href="#">Terms of service</a></span></p>
+                            </div>
 
-                        <div className="login-text">
-                            <p>Already have an account? <a href="">Login here</a></p>
-                        </div>
+                            <div className="form-group">
+                                <Inputs type="submit" className="form-input" name="signup" placeholder="Signup"/>
+                            </div>
 
-                    </form>
+                            <div className="form-group">
+                                <p className="login-here-text">
+                                    Already have an account ? <a href="#" className="login-here-link">Login here</a>
+                                </p>
+                            </div>
+                          
+                        </form>
+
+                    </div>
 
                 </div>
 
             </div>
-            
+
         </div>
     )
 }
