@@ -58,10 +58,10 @@ function Index() {
                             </div>
 
                             <div className="form-group">
-                                <Inputs type="email" name="email" text="Confirm Your Password" event={updateUserPassword}/>
+                                <Inputs type="password" name="email" text="Confirm Your Password" event={updateUserPassword}/>
                             </div>
 
-                            <div className="form-group">
+                            <div className="form-group agree-term">
                                 <Inputs type="checkbox" name="agree-term" id="agree-term"/>
                                 <p className="agree-term-text">I agree to all statements in <span className="agree-term-link"> <a href="#">Terms of service</a></span></p>
                             </div>
