@@ -1,4 +1,4 @@
-import Index from "./sign_up"
+import Index from "./pages/sign_up"
 
 function App() {
   return (

@@ -1,15 +1,22 @@
-import Inputs from "./components/inputs";
+import Inputs from "../../components/inputs";
+import Image from "../../components/image";
 import './style.css';
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 
 function Index() {
-    const [username, setUsername] = useState('');
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
     const [password, setUserPassword] = useState('');
     const [email, setUserEmail] = useState('');
 
-    function updateUsername(event){
-        setUsername(event.target.value);
-        console.log("Entering username");
+    function updateFirstName(event){
+        setFirstName(event.target.value);
+        console.log("Entering first name");
+    }
+
+    function updateLastName(event) {
+        setLastName(event.target.value);
+        console.log("Entering last name");
     }
 
     function updateUserPassword(event) {
@@ -23,35 +30,35 @@ function Index() {
     }
 
     return (
-        <div className="main">
+        <div className="main-container">
 
-            <div className="sign-up">
+                <div className="image-container">
+                    <Image />
+                </div>
 
                 <div className="sign-up-container">
+                        <h1>Create account</h1>
 
-                    <div className="sign-up-content">
-
-                        <form action="#" className="sign-up-form">
-                            <h2 className="form-title">Create account</h2>
+                        <form action="#">
 
                             <div className="form-group">
-                                <Inputs type="text" className="form-input" name="firstname" text="Your First Name"/>
+                                <Inputs type="text"  event={updateFirstName} name="firstname" text="Your First Name"/>
                             </div>
 
                             <div className="form-group">
-                                <Inputs type="text" className="form-input" name="lastname" text="Your Last Name"/>
+                                <Inputs type="text" name="lastname" text="Your Last Name" event={updateLastName}/>
                             </div>
 
                             <div className="form-group">
-                                <Inputs type="email" className="form-input" name="email" text="Your Email"/>
+                                <Inputs type="email" name="email" text="Your Email" event={updateUserEmail}/>
                             </div>
 
                             <div className="form-group">
-                                <Inputs type="password" className="form-input" name="password" text="Your Password"/>
+                                <Inputs type="password" name="password" text="Your Password" event={updateUserPassword}/>
                             </div>
 
                             <div className="form-group">
-                                <Inputs type="email" className="form-input" name="email" text="Confirm Your Password"/>
+                                <Inputs type="email" name="email" text="Confirm Your Password" event={updateUserPassword}/>
                             </div>
 
                             <div className="form-group">
@@ -60,7 +67,7 @@ function Index() {
                             </div>
 
                             <div className="form-group">
-                                <Inputs type="submit" className="form-input" name="signup" placeholder="Signup"/>
+                                <Inputs type="submit"  name="Sign up" placeholder="Signup"/>
                             </div>
 
                             <div className="form-group">
@@ -71,12 +78,8 @@ function Index() {
                           
                         </form>
 
-                    </div>
-
                 </div>
-
-            </div>
-
+                
         </div>
     )
 }
