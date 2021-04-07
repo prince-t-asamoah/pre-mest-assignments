@@ -1,36 +1,23 @@
-import React, { createContext, useContext, useReducer } from "react";
+import React, { createContext, useContext} from "react";
 
-const appContext = createContext();
+const AppContext = createContext();
 
-const initialState = {
-    appLoading: true,
-    initializeApp: false
-}
 
-const appReducer = (state, action) => {
-    switch (action.type) {
-        case 'stopLoading':
-            return {
-                initializeApp: true
-            }
-            default:
-                return "Default"
+const AppProvider =(props)=> {
+
+    function add(x, y) {
+        return x + y
     }
-} 
-
-const AppProvider = function(props) {
-    const [state, dispatch] = useReducer(appReducer, initialState)
 
     return (
-        <appContext.Provider value={{state, dispatch}}>
+        <AppContext.Provider value={{add}}>
             { props.children }
-        </appContext.Provider>
+        </AppContext.Provider>
     )
 }
 
-const useAppContext = function() {
-    useContext(AppContext);
-}
+const useAppContext =() => useContext(AppContext);
+
 
 export {
     AppProvider, useAppContext
