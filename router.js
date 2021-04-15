@@ -15,7 +15,7 @@ router.post("/login", function (request, response) {
         if (user[0].password === password) {
             response.send({ message: "Login Successful" });
         } else {
-            response.send({ message: "Username or Password wrongl" });
+            response.send({ message: "Username or Password wrong" });
         }
     } else {
         response.send({ message: "Login failed" });
@@ -25,11 +25,13 @@ router.post("/login", function (request, response) {
 router.post('/signup', function(request, response){
     let newUser = {
         firstName: request.body.firstName,
-        lastName: request.body.firstName,
+        lastName: request.body.lastName,
         email: request.body.email,
-        password: request.body.firstName,
+        password: request.body.password,
         userName: request.body.userName
     };
     console.log(newUser);
-    response.status(300).send("Sign up successful");
+    response.status(300).send({ message: "Sign up successful"});
 });
+
+module.exports = router;
