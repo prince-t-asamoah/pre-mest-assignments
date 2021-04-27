@@ -5,6 +5,7 @@ const router = express();
 
 router.post('/signup', async function(request, response) {
    const { fullName, email, password1, password2 } = request.body;
+   
 try {
    let newUser = new usermodel({
       fullName, email, password1, password2

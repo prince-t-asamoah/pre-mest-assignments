@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const schema = mongoose.schema;
+const schema = mongoose.Schema;
 
 const userModelSchema = new schema({
     fullName: String,
@@ -8,5 +8,5 @@ const userModelSchema = new schema({
     password2: String
 });
 
-const userModel = mongoose.model('userModel', userModelSchema);
+const userModel = mongoose.model('assignment7', userModelSchema);
 module.exports = userModel;
